@@ -43,6 +43,7 @@ Subtract -
 */
 
 /* Math Methods
+
 Floor - Rounds down
 Ceil - Rounds up
 Random - gives you number between 0 and 1
