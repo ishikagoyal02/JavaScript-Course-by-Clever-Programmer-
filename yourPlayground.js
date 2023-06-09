@@ -72,21 +72,129 @@ function weather()                                                  //weather fu
 // console.log(calFoodTotal(100,30))
 
                                 //arrow function
-sumArrow=()=>
-{
-    x=Number(prompt('x?'))
-    y=Number(prompt())
-    return x + y
+// sumArrow=()=>
+// {
+//     x=Number(prompt('x?'))
+//     y=Number(prompt())
+//     return x + y
+// }
+
+
+// console.log(sumArrow())
+// sumArrow=(a,b)=>a+b
+
+// console.log(sumArrow(5,8))
+
+// function name(a,b)
+// {
+//     return a+b
+// }
+// console.log(name('hi',0))
+
+                                    //ARRAY
+
+//  array=['a','b','c','d']
+//  console.log(array)
+// //  console.log(array[0])
+// //  console.log(array[2])
+
+// array.push('e')                                 //push operation
+// console.log(array)
+
+// console.log(array.slice(0,2))                   //0 is included and 2 is excluded   slice operation
+
+// console.log(array.indexOf('b'))
+// console.log(array.length)
+
+
+
+
+
+
+
+                                    //OBJECTS
+
+
+
+// const person = {                                              //person object
+//     name: 'ishika',
+//     rollNo: '2116173'
+// }
+
+// console.log(person.name)                                //dot notation
+// console.log(person.rollNo)
+
+// console.log(person['name'])                             //bracket bracket
+// console.log(person['rollNo'])
+
+
+// person.phnNo = '020-34456873'                          //object asssign
+
+// console.log(person.phnNo)
+
+// console.log(person)
+
+
+
+// const person2 = {
+//     name : 'hi',
+//     class : 'hlo'
+// }
+
+// console.log(person.name)                                //dot notation
+// console.log(person.class)
+
+// console.log(person)
+// console.log(person2)
+
+
+
+
+// const introducer  = (name ,shirt) => {
+     
+//     const person = {
+//         name1 : name ,
+//         shirt1 : shirt,
+//         assets : 100000,
+//         liabilities : 5000,
+//         netWorth : function(){
+//             return this.assets-this.liabilities
+//         }
+//     }
+//     console.log(`hi my name is ${person.name1} and i wear ${person.shirt1} and it's networth is ${person.netWorth()}`)
+// }
+
+// introducer('ishika','blue')
+
+
+
+
+
+                                //FOR LOOP
+
+
+// const fruit = ['a','b','c','d'] 
+
+// for(i=0;i<fruit.length;i++)
+//     console.log(i,fruit[i])
+
+// for(const john of fruit) {
+//     console.log(john)
+// }    
+
+        // for(const fruit of fruit) {                                 //WRONG PRACTICE
+        //     console.log(fruit)
+        // }
+
+
+const no = ['1','2','3','4']    
+sum=0 
+
+let result = []
+for(const john of no) {
+    sum+=Number(john)
+    result.push(sum)
 }
 
-
-console.log(sumArrow())
-sumArrow=(a,b)=>a+b
-
-console.log(sumArrow(5,8))
-
-function name(a,b)
-{
-    return a+b
-}
-console.log(name('hi',0))
+console.log(sum)
+console.log(result)
