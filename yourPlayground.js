@@ -215,4 +215,59 @@ function weather()                                                  //weather fu
 // console.log(howManyLetters(phrase))
 
 
+// sumArray = (array) =>                                           //ARRAY ELEMENTS SUM
+// {
+//     result =0
+
+//     for(i of array)
+//         result+= Number(i)
+//     return result    
+// }
+
+// array = ['1','3','5','6']
+// console.log(sumArray(array))
+
+                                                                    //ARRAY MAX ELEMENT
+
+
+// const arrayFreq = (array) =>                                        //ARRAY ELEMENT FREQ
+// {
+//     // letterFreq('haha' ) => {'h' :2 , 'a' : 2}
+
+//     console.log(array)
+
+//      let freq= {}                              //make freq object
+
+//     for(const letter of array)
+
+//     //check if letter exists in freq object
+//     if(letter in freq)
+//         freq[letter] = freq[letter] + 1                    //if yes, increment by +1
+//     else
+//             freq[letter] =   1                                  //otherwise, set value to 1
+
+//     return freq
+// }      
+
+// array='hahaha'
+// console.log(arrayFreq(array))
+
+
+const wordFreq = (array) =>
+{
+    let freq = {}
+    
+    words = array.split(' ')
+    for(const word of words)
+    {
+            if(word in freq)
+                freq[word] += 1
+            else
+            freq[word] = 1 
+    }
+
+    return freq
+}
+
+console.log(wordFreq("hi, hi ishika ishika goyal"))
 
