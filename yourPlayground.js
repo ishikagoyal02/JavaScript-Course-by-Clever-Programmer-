@@ -187,14 +187,32 @@ function weather()                                                  //weather fu
         // }
 
 
-const no = ['1','2','3','4']    
-sum=0 
+// const no = ['1','2','3','4']    
+// sum=0 
 
-let result = []
-for(const john of no) {
-    sum+=Number(john)
-    result.push(sum)
-}
+// let result = []
+// for(const john of no) {
+//     sum+=Number(john)
+//     result.push(sum)
+// }
 
-console.log(sum)
-console.log(result)
+// console.log(sum)
+// console.log(result)
+
+
+
+// const howManyLetters = (phrase) =>                          //size of string function 
+// {
+//     for( i in phrase)
+//     {
+//         console.log(Number(i) +1)
+//         result = Number(i) +1                                   //phrase.length
+//     }
+//     return {result : result}
+// }
+
+// const phrase= prompt("Write your Phrase : ")
+// console.log(howManyLetters(phrase))
+
+
+
