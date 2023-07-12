@@ -17,45 +17,57 @@ These are all the DIV ID's you're gonna need access to 👇
 #4 ID 👉 'perPersonTotal' = Total dollar value owed per person
 */
 
+let billTotalInputDiv=document.getElementById('billTotalInput')
+let tipInputDiv=document.getElementById('tipInput')
+let numberOfPeopleDiv=document.getElementById('numberOfPeople')
+let perPersonTotalDiv=document.getElementById('perPersonTotal')
+
 // Get global access to all inputs / divs here (you'll need them later 😘)
 // bill input, tip input, number of people div, and per person total div
-const billInput = document.getElementById('billTotalInput')
-const tipInput = document.getElementById('tipInput')
-const numberOfPeopleDiv = document.getElementById('numberOfPeople')
-const perPersonTotalDiv = document.getElementById('perPersonTotal')
-
+let currentPeople=1
+let billinput=0
+//let total=0
 
 // Get number of people from number of people div
-let numberOfPeople = Number(numberOfPeopleDiv.innerText)
+   
 
 // ** Calculate the total bill per person **
 const calculateBill = () => {
   // get bill from user input & convert it into a number
-  const bill = Number(billInput.value)
+  //   let bill=billTotalInputDiv.innerText
+  // console.log(bill)
+   const bill = Number(billTotalInputDiv.value)
+  //console.log(bill)
 
   // get the tip from user & convert it into a percentage (divide by 100)
-  const tipPercentage = Number(tipInput.value) / 100
+  const tipPer=Number(tipInputDiv.value)/100
+  
 
   // get the total tip amount
-  const tipAmount = bill * tipPercentage
-
+  const tipAmount=tipPer * bill
+    console.log({tipAmount})
   // calculate the total (tip amount + bill)
-  const total = tipAmount + bill
+
+  const total= tipAmount+ bill
+  
 
   // calculate the per person total (total divided by number of people)
-  const perPersonTotal = total / numberOfPeople
-
+      const PerPersonTotal=total/currentPeople
+      console.log({PerPersonTotal})
+      
   // update the perPersonTotal on DOM & show it to user
-  perPersonTotalDiv.innerText = `$${perPersonTotal.toFixed(2)}`
+perPersonTotalDiv.innerText=`$${PerPersonTotal.toLocaleString('en-US').toFixed(2)}`
+  
+
 }
 
 // ** Splits the bill between more people **
 const increasePeople = () => {
   // increment the amount of people
-  numberOfPeople += 1
+            currentPeople +=1
 
   // update the DOM with the new number of people
-  numberOfPeopleDiv.innerText = numberOfPeople
+          numberOfPeopleDiv.innerText=currentPeople
 
   // calculate the bill based on the new number of people
   calculateBill()
@@ -66,17 +78,29 @@ const decreasePeople = () => {
   // guard clause
   // if amount is 1 or less simply return
   // (a.k.a you can't decrease the number of people to 0 or negative!)
-  if (numberOfPeople <= 1) {
-    throw 'Hey! You cannot have less than 1 person!'
-    return
+
+  if(currentPeople<=1)
+  {
+    console.log("Can't less the people by this")
+    return;
   }
+
   
   // decrement the amount of people
-  numberOfPeople -= 1
+      currentPeople -=1
 
   // update the DOM with the new number of people
-  numberOfPeopleDiv.innerText = numberOfPeople
+      numberOfPeopleDiv.innerText=currentPeople
 
   // calculate the bill based on the new number of people
-  calculateBill()
+    calculateBill()
 }
+
+
+
+
+
+
+
+
+

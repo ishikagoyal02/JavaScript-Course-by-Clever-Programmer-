@@ -253,21 +253,134 @@ function weather()                                                  //weather fu
 // console.log(arrayFreq(array))
 
 
-const wordFreq = (array) =>
-{
-    let freq = {}
+
+// const wordFreq = (array) =>                              //word frequency of string/sentence
+// {
+//     let freq = {}
     
-    words = array.split(' ')
-    for(const word of words)
-    {
-            if(word in freq)
-                freq[word] += 1
-            else
-            freq[word] = 1 
-    }
+//     words = array.split(' ')
+//     for(const word of words)
+//     {
+//             if(word in freq)
+//                 freq[word] += 1
+//             else
+//             freq[word] = 1 
+//     }
 
-    return freq
+//     return freq
+// }
+
+// console.log(wordFreq("hi, hi ishika ishika goyal"))
+
+
+                                //MAP 
+
+// [1,2,3,4].map(number =>
+//     {
+//         console.log(number)
+//         console.log(haha)
+//     })
+
+// const doubleNumber = (numbers) =>{
+//     return numbers.map(numbers => numbers *2)
+// }    
+
+// console.log(doubleNumber([1,2,3,4]))
+
+
+
+// const filter = (number , greaternumber)  => {       //function return containing element of number greater than x
+//     let a = []
+//     for(const i of number)
+//     {
+//         if(i > greaternumber)
+//         {
+//             a.push(i)
+//         }
+      
+//     }
+
+//     return a    
+// }
+
+
+
+//console.log(filter([1, 2, 3, 4, 5, 6, 7], 3))
+// const nums =[1,2,3,4,5,6,7]
+// console.log(nums.filter(item=> item >3))
+
+// const array=[1,2,4,6,8,2]
+// console.log(array.filter(num=> num <4 || num <=2))
+
+
+
+
+
+// const actor =[
+//     {name:'ishika', netWorth:2000000},
+//     {name:'harshit',netWorth:80000}
+// ]
+
+// console.log(actor.filter(actor=>actor.netWorth>90000))
+
+                            //  ARRY OF OBJECT
+
+//     const stud=[
+//     {name:'ishika',roll : 7},
+//     { name: 'garvit' , sub: 'comm' , roll :7}
+// ]
+
+// const re = stud.reduce((a,b)=> a + b.roll,0)
+// console.log(re)
+
+            // let result=stud.filter(item=> item.roll==7)
+
+//  console.log(result.map(actor=>actor.name).join(','))
+//                                         //console.log(result.name)      output-> undefined
+
+
+
+
+// //playground.innerHTML=`<h1>${result}<h1>`
+
+
+
+            //reduce function
+
+// let arr=[10,20,30,50,7,8]
+ 
+// function sum (a,b,c){
+//     console.log('a',a)
+//     console.log('b',b)
+//     console.log('c',c)
+//     return a+b+c
+// } 
+
+// const I =arr.reduce(sum)
+
+// console.log(I)
+
+
+// const ar=[1,4,5,7,8,2]
+
+// const result=ar.reduce((a,b)=>a+b,-27)
+// console.log(result)
+
+
+
+
+                        //DOM MANIPULATION
+
+// console.log('hello')
+// let title=document.getElementById('title')
+
+// console.log(title.innerHTML)
+
+
+const randomFruit=(fruit)=>
+{
+    let ran=Math.floor(Math.random() *fruit.length)
+    return fruit[ran]
 }
-
-console.log(wordFreq("hi, hi ishika ishika goyal"))
-
+let fruit =['mango','apple','orange','banana']
+console.log(randomFruit(fruit))
